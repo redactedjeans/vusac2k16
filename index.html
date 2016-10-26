@@ -1,15 +1,47 @@
 <html>
 <head>
-  <title>Thomas Jean Lynch</title>
+  <title>Vote Thomas Lynch 2k16</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
 
   <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 </head>
 <body>
   <div id="col-wrapper">
-    <div id="one" class="col" tabindex=1><h1>vote</h1></div>
-    <div id="two" class="col" tabindex=1><h1>for</h1></div>
-    <div id="three" class="col" tabindex=1><h1>me</h1></div>
+    <div id="one" class="col" tabindex=1>
+      <h1>
+        <span class="w4">vote</span><br/>
+        <span class="w6">thomas</span><br/>
+        <span class="w5">lynch</span><br/>
+        <span class="w4">2k16</span>
+      </h1>
+      <div class="v-space"></div>
+      <p>head over to <a href="https://voting.utoronto.ca">voting.utoronto.ca</a> on Oct 31 and Nov 1 to vote<br/>
+      or vote in person at designated polling stations at Vic</p>
+    </div>
+    <div id="two" class="col" tabindex=1>
+      <h1>my experience</h1>
+      <p>
+        <span class="tab">&#8226; <span/>VCFC treasurer<br/>
+        <span class="tab">&#8226; <span/>general member of VicXposure<br/>
+        <span class="tab">&#8226; <span/>general member of Shadow Dance<br/>
+        <span class="tab">&#8226; <span/>subcommittee member and co-manager of the Cat's Eye<br/>
+        <span class="tab">&#8226; <span/>assistant technical director and steward of VCDS<br/>
+        <span class="tab">&#8226; <span/>volunteer and exec of Caffiends<br/>
+        <span class="tab">&#8226; <span/>VicPride! exec<br/>
+        <span class="tab">&#8226; <span/>VEFS model
+      </p>
+    </div>
+    <div id="three" class="col" tabindex=1>
+      <h1>my values</h1>
+      <p>
+        <span class="bold">diversity: </span>
+        <span class="long">I have always valued diversity and strive to improve both myself and the community around me</span><br/><br/>
+        <span class="bold">accessibility: </span>
+        <span class="long">making VUSAC and Vic in general accessible to all students is essential to its mandate</span><br/><br/>
+        <span class="bold">student involvement: </span>
+        <span id="long">one of the best ways to break the 'bubble' is to get more people involved (even in minor ways) at Vic</span><br/><br/>
+      </p>
+    </div>
   </div>
 </body>
 <style>
@@ -18,6 +50,12 @@ body {
   margin: 0;
   font-size: 62.5%;
   min-width: 320px;
+  font-family: 'Cutive Mono', monospace;
+}
+.bold { font-weight: bold; }
+.tab { padding-left: 2rem; }
+.v-space {
+  flex-grow: 999;
 }
 
 /* three columns */
@@ -32,18 +70,26 @@ body {
   transition: flex-grow .3s ease-in-out;
 }
 #one {
+  display: flex;
+  flex-direction: column;
+  min-height: 10%;
   flex-grow: 1;
   /* first image */
-  background: url('img/3.JPG') 61% 80%;
+  background: url('img/4.JPG') 61% 80%;
   background-size: cover;
   background-color: #37483b;
+  color: #f1ecf1;
 }
 #two {
+  display: flex;
+  flex-direction: column;
+  min-height: 10%;
   flex-grow: 1;
   /* second image */
   background: url('img/1.JPG') 37% 80%;
   background-size: cover;
   background-color: #bc7676;
+  color: #160c16;
 
   /* borders */
   border-left: 2px solid;
@@ -51,15 +97,81 @@ body {
   border-color: #f1ecf1;
 }
 #three {
+  display: flex;
+  flex-direction: column;
+  min-height: 10%;
   flex-grow: 1;
   /* third image */
-  background: url('img/4.JPG') 53% 80%;
+  background: url('img/3.JPG') 53% 80%;
   background-size: cover;
   background-color: #a57cba;
+  color: #160c16;
 }
 #col-wrapper .col:focus {
   flex-grow: 999;
 }
+
+
+/* title text */
+h1 {
+  /* text style, transition */
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+
+  /* spacing */
+  margin: 0;
+  margin-top: 1.5rem;
+
+  /* overflow behaviour */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.w4 { letter-spacing: 2.3rem; }
+.w5 { letter-spacing: 1.5rem; }
+.w6 { letter-spacing: 1rem; }
+#one h1 {
+  /* spacing */
+  margin-left: 3rem;
+
+  /* text style */
+  text-align: left;
+  line-height: 1.7;
+}
+#two h1 {
+  /* text style */
+  text-align: center;
+}
+#three h1 {
+  /* spacing */
+  margin-right: 3rem;
+
+  /* text style */
+  text-align: right;
+  direction: rtl;
+}
+
+/* paragraph text */
+p {
+  margin: 1.5rem;
+  font-size: 1rem;
+  overflow: hidden;
+  /*white-space: nowrap;*/
+}
+#one p {
+  text-direction: rtl;
+  text-align: right;
+  color: #f1ecf1;
+}
+a {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* vertical layout */
 @media (max-width: 500px) {
   #col-wrapper {
@@ -71,44 +183,6 @@ body {
     border-bottom: 1px solid;
     border-color: #f1ecf1;
   }
-}
-
-/* title text */
-.col h1 {
-  /* text style, transition */
-  font-family: 'Cutive Mono', monospace;
-  font-weight: 400;
-  font-size: 1.4rem;
-
-  /* spacing */
-  margin: 0;
-  margin-top: 2rem;
-
-  /* overflow behaviour */
-  overflow: hidden;
-  white-space: nowrap;
-}
-#one h1 {
-  /* spacing */
-  margin-left: 3rem;
-
-  /* text style */
-  text-align: left;
-  color: #160c16;
-}
-#two h1 {
-  /* text style */
-  text-align: center;
-  color: #160c16;
-}
-#three h1 {
-  /* spacing */
-  margin-right: 3rem;
-
-  /* text style */
-  text-align: right;
-  direction: rtl;
-  color: #f1ecf1;
-}
-</style>
+  h1 { overflow: visible; }
+}</style>
 </html>
