@@ -1,0 +1,114 @@
+<html>
+<head>
+  <title>Thomas Jean Lynch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+
+  <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+</head>
+<body>
+  <div id="col-wrapper">
+    <div id="one" class="col" tabindex=1><h1>vote</h1></div>
+    <div id="two" class="col" tabindex=1><h1>for</h1></div>
+    <div id="three" class="col" tabindex=1><h1>me</h1></div>
+  </div>
+</body>
+<style>
+/* general */
+body {
+  margin: 0;
+  font-size: 62.5%;
+  min-width: 320px;
+}
+
+/* three columns */
+#col-wrapper {
+  display: flex;
+  height: 100%;
+}
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 10%;
+  transition: flex-grow .3s ease-in-out;
+}
+#one {
+  flex-grow: 1;
+  /* first image */
+  background: url('img/3.JPG') 61% 80%;
+  background-size: cover;
+  background-color: #37483b;
+}
+#two {
+  flex-grow: 1;
+  /* second image */
+  background: url('img/1.JPG') 37% 80%;
+  background-size: cover;
+  background-color: #bc7676;
+
+  /* borders */
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-color: #f1ecf1;
+}
+#three {
+  flex-grow: 1;
+  /* third image */
+  background: url('img/4.JPG') 53% 80%;
+  background-size: cover;
+  background-color: #a57cba;
+}
+#col-wrapper .col:focus {
+  flex-grow: 999;
+}
+/* vertical layout */
+@media (max-width: 500px) {
+  #col-wrapper {
+    flex-direction: column;
+  }
+  #two {
+    border: none;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #f1ecf1;
+  }
+}
+
+/* title text */
+.col h1 {
+  /* text style, transition */
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 400;
+  font-size: 1.4rem;
+
+  /* spacing */
+  margin: 0;
+  margin-top: 2rem;
+
+  /* overflow behaviour */
+  overflow: hidden;
+  white-space: nowrap;
+}
+#one h1 {
+  /* spacing */
+  margin-left: 3rem;
+
+  /* text style */
+  text-align: left;
+  color: #160c16;
+}
+#two h1 {
+  /* text style */
+  text-align: center;
+  color: #160c16;
+}
+#three h1 {
+  /* spacing */
+  margin-right: 3rem;
+
+  /* text style */
+  text-align: right;
+  direction: rtl;
+  color: #f1ecf1;
+}
+</style>
+</html>
